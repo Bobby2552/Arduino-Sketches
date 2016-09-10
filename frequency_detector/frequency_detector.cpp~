@@ -1,0 +1,26 @@
+int buf[] = [3];
+unsigned long firstTime;
+unsigned long secondTime;
+
+void setup() {
+  Serial.begin(9600); 
+}
+
+void loop() {
+  for (int i = 0; i < 5; i++) {
+    // Fill Buffer
+    buf[0] = analogRead(A0);
+    buf[1] = analogRead(A0);
+    buf[2] = analogRead(A0);
+    do {
+    buf[0] = analogRead(A0);
+    buf[1] = analogRead(A0);
+    buf[2] = analogRead(A0);
+    } while(!(buf[1] > buf[0] && buf[1] > buf[2]))
+    
+  } 
+}
+
+int[] collect() {
+  
+}
