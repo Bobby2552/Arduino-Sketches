@@ -2,11 +2,13 @@
 #define in2 7
 int rotDirection = 0;
 int pressed = false;
+
 void setup() {
   pinMode(in1, OUTPUT);
   pinMode(in2, OUTPUT);
   Serial.begin(115200);
 }
+
 void loop() {
   Serial.setTimeout(50);
   String time = Serial.readString();
